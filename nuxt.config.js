@@ -4,7 +4,6 @@ import path from 'path'
 import glob from 'glob'
 
 var dynamicRoutes = getDynamicPaths({
-  '/blog': 'blog/*.json',
   '/page': 'page/*.json',
 });
 
@@ -31,12 +30,13 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#FBF3ED' },
 
   /*
   ** Global CSS
   */
   css: [
+    'assets/main.css',
   ],
 
   /*
