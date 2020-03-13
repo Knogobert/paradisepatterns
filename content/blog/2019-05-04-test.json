@@ -1,6 +1,7 @@
 {
-  "title": "Hello World!",
-  "date": "4th May, 2019",
-  "author": "Tyler Mercer",
-  "body": "This is a test post!"
+  "title": "Blog entry test",
+  "date": "14th Mar 2020",
+  "author": "Sven Parker",
+  "body": "This is a test post!",
+  "thumbnail": "/images/uploads/cg-bernadotte-kungen.jpg"
 }
