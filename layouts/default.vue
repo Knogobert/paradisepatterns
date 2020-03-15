@@ -1,26 +1,19 @@
 <template>
   <div class="layout">
-    <div class="header">
+    <header class="header">
       <n-link class="logo" to="/"><Logo/></n-link>
-    </div>
+    </header>
     <nuxt class="content" />
-    <div class="footer">
-      <p>
-        <a target="_blank"
-            rel="noopener noreferrer"
-            href="https://etsy.com">
-          Paradise Patterns on Etsy
-        </a>
-      </p>
-      <p>
-        <!-- This is not an n-link because the NetlifyCMS admin page is static.
-        If you make it an n-link, you'll get a "Page could not be found" when
-        you click it. -->
-        <a href="/admin">
-          Admin
-       </a>
-     </p>
-    </div>
+    <footer class="footer">
+      <a href="/admin" target="_blank">Admin</a>
+       /
+      created by 
+      <a target="_blank"
+        rel="noopener noreferrer"
+        href="https://etsy.com">
+        svenparker.com
+      </a>
+    </footer>
   </div>
 </template>
 
@@ -40,7 +33,9 @@ export default {
   margin-left: auto;
   margin-right: auto;
   height: 100vh;
-  padding: 40px 20px 10px 20px;
+  padding: 40px 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -50,25 +45,20 @@ export default {
   justify-content: center;
   width: 100%;
 }
-.content {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.footer {
-  background-color: #F3D9E8;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.footer > * {
-  padding: 20px;
-}
-
 .logo {
   display: block;
   margin: 0;
   padding: 0;
+}
+
+.content {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  flex-grow: 2;
+  justify-items: flex-start;
+}
+
+.footer {
+  text-align: center;
 }
 </style>
