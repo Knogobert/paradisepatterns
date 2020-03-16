@@ -28,5 +28,5 @@ collections:
       file: "content/setup/links.json"
       fields:
         - {label: Link Name, name: linkname, widget: string}
-        - {label: Link External, name: linkexternal, widget: string}
-        - {label: Link Internal, name: linkinternal, widget: string}
+        - {label: Link External, name: linkexternal, widget: string, required: false}
+        - {label: Link Internal, name: linkinternal, widget: string, required: false}

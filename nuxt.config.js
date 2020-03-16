@@ -40,7 +40,7 @@ export default {
       { rel: 'manifest', href: '/site.webmanifest' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#fab315' },
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Gotu&display=swap' }
     ]
   },
 
