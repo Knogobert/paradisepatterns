@@ -4,24 +4,29 @@ backend:
 publish_mode: editorial_workflow
 media_folder: "static/images/uploads" # Media files will be stored in the repo under images/uploads
 public_folder: "/images/uploads"
+site_url: https://paradisepatterns.com
+logo_url: https://paradisepatterns.com/images/uploads/p-logo-mini-yellow.svg
 collections:
   - label: "Setup"
     name: "setup"
     files:
-    - label: "Site Info"
+    - label: "Info"
       name: "info"
       format: 'json'
       file: "content/setup/info.json"
+      editor:
+        preview: false
       fields:
         - {label: Site Name, name: sitename, widget: string}
         - {label: Site Description, name: sitedescription, widget: string}
-  - name: "pages" # Used in routes, e.g., /admin/collections/pages
-    label: "Pages" # Used in the UI
-    folder: "content/pages" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    format: 'json'
-    fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+        - {label: Your email, name: siteemail, widget: string}
+        - {label: Your phone, name: sitephone, widget: string}
+    - label: "Links"
+      name: "links"
+      format: 'json'
+      create: true
+      file: "content/setup/links.json"
+      fields:
+        - {label: Link Name, name: linkname, widget: string}
+        - {label: Link External, name: linkexternal, widget: string}
+        - {label: Link Internal, name: linkinternal, widget: string}

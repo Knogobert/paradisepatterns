@@ -1,7 +1,7 @@
 <template lang="html">
   <main class="main">
     <div class="main-header">
-      <!-- <h1>{{siteInfo.sitename}}</h1> -->
+      <h1>{{siteInfo.sitename}}</h1>
       <p>{{siteInfo.sitedescription}}</p>
     </div>
     <div class="tabs">

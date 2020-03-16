@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="css" scoped>
 .PPlogo {
   display: inline-block;
   height: 245px;
