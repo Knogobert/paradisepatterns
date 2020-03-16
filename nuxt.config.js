@@ -20,17 +20,34 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: pkg.description },
+      { property: 'og:type', content: 'profile'},
+      { property: 'og:title', content: 'Paradise Patterns'},
+      { property: 'og:url', content: 'https://paradisepatterns.com'},
+      // { property: 'og:image', content: 'https://paradisepatterns.com/ogp.jpg'},
+      { property: 'profile:first_name', content: 'Sanna'},
+      { property: 'profile:last_name', content: 'Myers'},
+      { name: 'msapplication-TileColor', content: '#fab315'},
+      { name: 'msapplication-config', content: 'browserconfig.xml'},
+      { name: 'theme-color', content: '#fab315'},
+      { name: 'robots', content: 'index, follow' },
+      // { name: 'google-site-verification', content: '' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'apple-touch-icon', type: 'image/png', sizes: '180x180', href: '/apple-touch-icon.png' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+      { rel: 'manifest', href: '/site.webmanifest' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#fab315' },
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
+      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito' }
     ]
   },
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#FBF3ED' },
+  loading: { color: '#fab315' },
 
   /*
   ** Global CSS
