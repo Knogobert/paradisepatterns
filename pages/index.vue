@@ -5,12 +5,12 @@
       <p>{{siteInfo.sitedescription}}</p>
     </div>
     <div class="tabs">
-      <a target="_blank"
+      <!-- <a target="_blank"
           rel="noopener noreferrer"
           href="https://etsy.com"
            class="button button--pink">
         Buy print-at-home patterns
-      </a>
+      </a> -->
       <n-link to="/contact" class="button button--pink">
         Hire me
       </n-link>

@@ -10,8 +10,8 @@
       created by 
       <a target="_blank"
         rel="noopener noreferrer"
-        href="https://etsy.com">
-        svenparker.com
+        href="https://svenparker.com">
+        svenparker
       </a>
     </footer>
   </div>

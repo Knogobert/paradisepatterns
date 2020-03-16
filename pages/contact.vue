@@ -6,7 +6,7 @@
         Email: <a :href="`mailto:${siteInfo.siteemail}`">{{siteInfo.siteemail}}</a>
       </p>
       <p v-if="siteInfo.sitephone">
-        Phone: <a :href="`tel:${siteInfo.sitephone}`">{{siteInfo.sitephone}}</a>
+        Phone: <a :href="`tel:${siteInfo.sitephone.replace(/[^\d+]/g,'')}`">{{siteInfo.sitephone}}</a>
       </p>
     </div>
     <div class="tabs">
