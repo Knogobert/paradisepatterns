@@ -18,7 +18,8 @@
     "cross-env": "^5.2.0",
     "lodash": ">=4.17.13",
     "lodash.template": ">=4.5.0",
-    "nuxt": "^2.11.0"
+    "nuxt": "^2.11.0",
+    "vue-inline-svg": "^1.2.0"
   },
   "devDependencies": {
     "glob": "^7.1.3",
