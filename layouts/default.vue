@@ -6,13 +6,6 @@
     <nuxt class="content" />
     <footer class="footer">
       <a href="/admin" target="_blank">Admin</a>
-       /
-      created by 
-      <a target="_blank"
-        rel="noopener noreferrer"
-        href="https://svenparker.com">
-        svenparker
-      </a>
     </footer>
   </div>
 </template>
@@ -60,5 +53,8 @@ export default {
 
 .footer {
   text-align: center;
+}
+.footer a {
+  color: #D886A366;
 }
 </style>
