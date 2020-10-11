@@ -43,12 +43,13 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Gotu&display=swap' }
     ]
   },
-  // generate: {
-  //   routes: dynamicRoutes,
-  //   fallback: true,
-  //   subFolders: false
-  // },
-  target: 'static',
+  generate: {
+    exclude: ['/admin'],
+    // routes: dynamicRoutes,
+    fallback: true,
+    subFolders: false
+  },
+  // target: 'static',
 
   /*
   ** Customize the progress-bar color
