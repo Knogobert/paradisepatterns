@@ -3,15 +3,15 @@ import info from './content/setup/info'
 import path from 'path'
 import glob from 'glob'
 
-var dynamicRoutes = getDynamicPaths({
-  '/page': 'page/*.json',
-});
-
-console.log(dynamicRoutes);
+// const dynamicContentPath = 'assets/content' // ? No prepending/appending backslashes here
+// const dynamicRoutes = getDynamicPaths(
+//   {
+//     page: 'page/*.json',
+//   },
+//   dynamicContentPath
+// )
 
 export default {
-  mode: 'universal',
-
   /*
   ** Headers of the page
   */
@@ -43,6 +43,12 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Gotu&display=swap' }
     ]
   },
+  // generate: {
+  //   routes: dynamicRoutes,
+  //   fallback: true,
+  //   subFolders: false
+  // },
+  target: 'static',
 
   /*
   ** Customize the progress-bar color
@@ -75,8 +81,6 @@ export default {
     preset: 'default',
     breaks: true,
     html: true
-
-
   },
   /*
   ** Axios module configuration
@@ -95,22 +99,48 @@ export default {
     extend(config, ctx) {
     },
   },
-  generate: {
-    routes: dynamicRoutes
+  /*
+   ** Custom additions configuration
+  */
+  pwa: {
+    icon: {
+      source: 'static/icon.png',
+      filename: 'icon.png'
+    },
+    manifest: { name: info.sitename || '', lang: process.env.lang || 'en-US' },
+    meta: {
+      name: info.sitename || '',
+      lang: process.env.lang || 'en-US',
+      ogHost: 'https://paradisepatterns.com',
+      ogImage: '/ogp.png'
+    }
   }
 }
 
 /**
  * Create an array of URLs from a list of files
- * @param {*} urlFilepathTable
+ * @param {*} urlFilepathTable - example below
+ * {
+ *   blog: 'blog/*.json',
+ *   projects: 'projects/*.json'
+ * }
+ *
+ * @return {Array} - Will return those files into urls for SSR generated .html's like
+ * [
+ *   /blog/2019-08-27-incidunt-laborum-e ,
+ *   /projects/story-test-story-1
+ * ]
  */
-function getDynamicPaths(urlFilepathTable) {
-  return [].concat(
+function getDynamicPaths(urlFilepathTable, cwdPath) {
+  console.log('Going to generate dynamicRoutes for these collection types: ', urlFilepathTable)
+  const dynamicPaths = [].concat(
     ...Object.keys(urlFilepathTable).map(url => {
-      var filepathGlob = urlFilepathTable[url];
-      return glob
-        .sync(filepathGlob, { cwd: 'content' })
-        .map(filepath => `${url}/${path.basename(filepath, '.json')}`);
+      const filepathGlob = urlFilepathTable[url]
+      return glob.sync(filepathGlob, { cwd: cwdPath }).map(filepath => {
+        return `/${url}/${path.basename(filepath, '.json')}`
+      })
     })
-  );
+  )
+  console.log('Found these dynamicPaths that will be SSR generated:', dynamicPaths)
+  return dynamicPaths
 }
