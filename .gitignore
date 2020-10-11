@@ -3,3 +3,6 @@ dist
 .env
 .nuxt
 .serverless
+
+# Local Netlify folder
+.netlify
