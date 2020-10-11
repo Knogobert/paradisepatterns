@@ -1,6 +1,6 @@
 <template>
   <div class="PPlogo">
-    <InlineSvg :src="require('../static/images/uploads/pp-logo.svg')" height="245px" width="245px"/>
+    <InlineSvg :src="require('../static/pp-logo.svg')" height="245px" width="245px"/>
   </div>
 </template>
 
