@@ -5,13 +5,13 @@ publish_mode: editorial_workflow
 media_folder: "static/uploads" # Media files will be stored in the repo under/uploads
 public_folder: "/uploads"
 site_url: https://paradisepatterns.com
-logo_url: https://paradisepatterns.com/uploads/p-logo-mini-yellow.svg
+logo_url: https://paradisepatterns.com/icon.png
 collections:
-  - label: "Setup"
-    name: "setup"
+  - name: "setup"
+    label: "Setup"
     files:
-    - label: "Info"
-      name: "info"
+    - name: "info"
+      label: "Info"
       format: 'json'
       file: "content/setup/info.json"
       editor:
@@ -21,12 +21,30 @@ collections:
         - {label: Site Description, name: sitedescription, widget: string}
         - {label: Your email, name: siteemail, widget: string, required: false}
         - {label: Your phone, name: sitephone, widget: string, required: false}
-    - label: "Links"
-      name: "links"
-      widget: "list"
-      format: 'json'
-      file: "content/setup/links.json"
-      fields:
-        - {label: Link Name, name: linkname, widget: string}
-        - {label: Link External, name: linkexternal, widget: string, required: false}
-        - {label: Link Internal, name: linkinternal, widget: string, required: false}
+    # - name: "colors"
+    #   label: "Colors"
+    #   format: 'json'
+    #   file: "content/setup/colors.json"
+    #   fields:
+    #     - {label: Primary color, name: primary, widget: string}
+    #     - {label: Secondary color, name: secondary, widget: string}
+    #     - {label: Background color, name: background, widget: string}
+  - name: "links"
+    label: "Links"
+    label_singular: 'Link'
+    # widget: "list"
+    format: 'json'
+    # file: "content/setup/links.json"
+    folder: "content/links/"
+    create: true
+    slug: '{{slug}}-{{pos}}'
+    identifier_field: name
+    editor:
+        preview: false
+    fields:
+      - {label: Link Name, name: name, widget: string, required: true}
+      - {label: Link Target, name: target, widget: string, required: true}
+      - {label: Open in new tab?, name: newtab, widget: boolean, required: false}
+      - {label: Link Position, name: pos, widget: select, default: 'button_row',
+        options: [{ label: 'Button row', value: 'button_row' }, { label: 'Social media row', value: 'socialmedia_row' }]}
+      - {label: Link icon, description: Insert the <svg> code of an icon here if you want to use one, name: icon, widget: code, required: false}

@@ -27,7 +27,7 @@ export default {
 
 <style>
 .layout {
-  max-width: 600px;
+  /* max-width: 600px; */
   margin-left: auto;
   margin-right: auto;
   height: 100vh;

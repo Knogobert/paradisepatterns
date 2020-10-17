@@ -10,7 +10,7 @@
       </p>
     </div>
     <div class="tabs">
-      <n-link to="/" class="button button--pink">
+      <n-link to="/" class="button button--outline">
         Back
       </n-link>
     </div>
