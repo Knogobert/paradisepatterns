@@ -47,4 +47,4 @@ collections:
       - {label: Open in new tab?, name: newtab, widget: boolean, required: false}
       - {label: Link Position, name: pos, widget: select, default: 'button_row',
         options: [{ label: 'Button row', value: 'button_row' }, { label: 'Social media row', value: 'socialmedia_row' }]}
-      - {label: Link icon, description: Insert the <svg> code of an icon here if you want to use one, name: icon, widget: code, required: false}
+      - {label: Link icon, description: Upload first then choose a svg icon here if you want to use one, name: icon, widget: image, allow_multiple: false, required: false}
