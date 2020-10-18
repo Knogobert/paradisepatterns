@@ -67,8 +67,6 @@ a:visited {
 
 .button > .button-icon {
   display: inline-flex;
-}
-.button-icon svg {
   max-width: 3rem;
   max-height: 3rem;
   margin: 1rem;
