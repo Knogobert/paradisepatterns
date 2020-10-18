@@ -2,5 +2,6 @@
   "name": "@paradisepatterns",
   "target": "https://www.instagram.com/paradisepatterns/",
   "newtab": true,
-  "pos": "socialmedia_row"
+  "pos": "socialmedia_row",
+  "icon": "/uploads/instagram.svg"
 }
