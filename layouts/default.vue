@@ -60,6 +60,7 @@ export default {
   text-align: center;
 }
 .footer a {
-  color: #D886A366;
+  color: var(--primary-color);
+  opacity: .25;
 }
 </style>

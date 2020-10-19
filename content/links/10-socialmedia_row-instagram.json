@@ -3,5 +3,6 @@
   "target": "https://www.instagram.com/paradisepatterns/",
   "newtab": true,
   "pos": "socialmedia_row",
-  "icon": "/uploads/instagram.svg"
+  "icon": "/uploads/instagram.svg",
+  "order": 10
 }
