@@ -2,5 +2,6 @@
   "name": "Subscribe to my email list",
   "target": "https://view.flodesk.com/pages/5f82538087482815d43e1008",
   "newtab": true,
-  "pos": "button_row"
+  "pos": "button_row",
+  "order": 30
 }

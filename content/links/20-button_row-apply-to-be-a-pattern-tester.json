@@ -2,5 +2,6 @@
   "pos": "button_row",
   "target": "https://forms.gle/3QnK57qF5HUoBeKw8",
   "name": "Apply to be a pattern tester",
-  "newtab": true
+  "newtab": true,
+  "order": 20
 }

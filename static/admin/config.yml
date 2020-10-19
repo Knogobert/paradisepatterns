@@ -37,11 +37,12 @@ collections:
     # file: "content/setup/links.json"
     folder: "content/links/"
     create: true
-    slug: '{{slug}}-{{pos}}'
+    slug: '{{order}}-{{pos}}-{{slug}}'
     identifier_field: name
     editor:
         preview: false
     fields:
+      - {label: Order, description: 'Put the number in which order you want the link to have and match it according to the others (tip: set the numbers in orders of 10, so that you can fit another one between someday)', name: order, widget: number, min: 1, max: 100, value_type: int, required: true, default: 10 }
       - {label: Link Name, name: name, widget: string, required: true}
       - {label: Link Target, name: target, widget: string, required: true}
       - {label: Open in new tab?, name: newtab, widget: boolean, required: false}

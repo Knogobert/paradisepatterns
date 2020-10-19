@@ -30,7 +30,7 @@ export default {
   /* max-width: 600px; */
   margin-left: auto;
   margin-right: auto;
-  height: 100vh;
+  min-height: 100vh;
   padding: 40px 20px 30px 20px;
   display: flex;
   flex-direction: column;
@@ -60,6 +60,7 @@ export default {
   text-align: center;
 }
 .footer a {
-  color: #D886A366;
+  color: var(--primary-color);
+  opacity: .25;
 }
 </style>
