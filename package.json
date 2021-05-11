@@ -16,7 +16,7 @@
     "@nuxtjs/markdownit": "^1.2.10",
     "@nuxtjs/pwa": "^3.2.2",
     "cross-env": "^5.2.0",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "lodash.template": ">=4.5.0",
     "nuxt": "^2.14.7",
     "vue-inline-svg": "^1.2.0"
